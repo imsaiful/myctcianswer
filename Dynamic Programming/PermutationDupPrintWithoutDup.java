@@ -21,7 +21,6 @@ class PermutationDupPrintWithoutDup{
 	public static void PrintPerm(HashMap<Character,Integer> hm,String prefix,int remaining){
 		
 		if(remaining==0){
-			
 			System.out.println(prefix);
 		}
 		for(char c:hm.keySet()){
