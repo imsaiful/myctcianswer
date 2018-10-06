@@ -1,7 +1,7 @@
 import java.util.*;
 class PermutationWithoutDups{
 	public static void main(String[] args) {
-		String s="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABC";
+		String s="ADBC";
 		//PermutationWithoutDups pd=new PermutationWithoutDups();
 		Find_Permutation_without_dup(s);
 	}

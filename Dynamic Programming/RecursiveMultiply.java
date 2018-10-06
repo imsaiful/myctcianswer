@@ -22,15 +22,6 @@ class RecursiveMultiply{
 		if(smaller%2==0){
 			return halfProd+halfProd;
 		}
-
-
 		return halfProd+halfProd+bigger;
-	
-
-
-
 	}
-
-
-
 }

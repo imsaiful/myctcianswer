@@ -19,11 +19,6 @@ class CoinChange{
 
 
 			}
-								//System.out.println();
-
-
-
-
 		}
 		return ar[sum];
 
