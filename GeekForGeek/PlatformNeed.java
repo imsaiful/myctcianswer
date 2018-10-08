@@ -7,6 +7,8 @@ class PlatformNeed{
     System.out.println(number_of_platform);
 	}
 	public static int Calculate(int[] arr,int[] dep){
+		Arrays.sort(arr);
+		Arrays.sort(dep);
 		int n=arr.length;
 		int i,j,max,current;
 		i=j=max=current=0;
