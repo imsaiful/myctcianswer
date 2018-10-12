@@ -1,3 +1,5 @@
+//How to check if given four points form a square
+
 class Point{
 	int x;
 	int y;
