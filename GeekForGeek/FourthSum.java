@@ -14,7 +14,7 @@ class FourthSum{
 				int l=j+1;
 				int r=n-1;
 				while(l<=r){
-					//System.out.println(a[i]+" "+a[j]+" "+a[l]+" "+a[r]);
+					System.out.println(a[i]+" "+a[j]+" "+a[l]+" "+a[r]);
 					if(a[i]+a[j]+a[l]+a[r]==x){
 						System.out.println(a[i]+" "+a[j]+" "+a[l]+" "+a[r]);
 						l++;
