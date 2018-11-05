@@ -11,7 +11,6 @@ class Linked_U_I{
 		temp.next=head;
 		head=temp;
 	}
-
 	public static void print(LinkNode head){
 		LinkNode l=head;
 		while(l!=null){

@@ -17,13 +17,5 @@ class AllPrime{
 			i++;
 		}
 		return true;
-
-
-
-
 	}
-
-
-
-
 }

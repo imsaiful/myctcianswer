@@ -13,8 +13,6 @@ class FindMiddle{
 		new_node.next=head;
 		head=new_node;
 	}
-
-
 	public int FinaMid(){
 		ListNode slow=head;
 		ListNode fast=head;
@@ -24,7 +22,6 @@ class FindMiddle{
 		}
 		return slow.data;
 	}
-
 	public static void main(String[] args) {
 	FindMiddle f=new FindMiddle();
 	f.push(1);

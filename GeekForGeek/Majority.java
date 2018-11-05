@@ -16,11 +16,6 @@ class Majority{
 			{
 				hm.put(a[i],1);
 			}
-
-
-
 		}
-
-
 	}
 }

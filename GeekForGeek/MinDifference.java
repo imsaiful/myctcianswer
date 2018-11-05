@@ -11,8 +11,4 @@ class MinDifference{
 		}
 		System.out.println(min);
 	}
-
-
-
-
 }

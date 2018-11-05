@@ -22,14 +22,6 @@ class ArrayEquilibirium{
 			left_sum+=a[i];
 		}
 		return -1;
-		
-
-
-
-
 	}
-
-
-
 
 }
