@@ -1,4 +1,5 @@
 //Egg Dropping Puzzle
+
 class EggDropping{
 	public static void main(String[] args) {
 		help_fun(36,2);
@@ -21,11 +22,6 @@ class EggDropping{
 			}
 		}
 		System.out.println(T[egg][floor]);
-
-
-
-
-
 	} 
 
 
