@@ -12,7 +12,7 @@ class 2-CheckPermutation{
 		int[] letter=new int[128];
 		for(int i=0;i<s1.length();i++){
 			int c=s1.charAt(i);
-			System.out.println(c);
+			
 			letter[c]++;
 		}
 		for(int i=0;i<s2.length();i++){
