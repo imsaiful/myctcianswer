@@ -10,10 +10,5 @@ class Missing2Element{
 				System.out.println(i);
 			}
 		}
-
-
-
 	}
-
-
 }

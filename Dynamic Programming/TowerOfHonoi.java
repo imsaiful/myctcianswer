@@ -1,4 +1,4 @@
-class TowerOfHonoi{
+-class TowerOfHonoi{
 	public static void main(String[] args) {
 		int n=4;
 		ChangeStack(n,'A','B','C');
