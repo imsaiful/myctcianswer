@@ -9,7 +9,7 @@ class NextHighPermutation{
 		int n=c.length;
 		int i,j,smallest;
 
-		if(c.length<=3){
+		if(c.length<2){
 			return "Not Possible";
 		}
 
