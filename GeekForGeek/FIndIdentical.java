@@ -11,6 +11,7 @@ class Node{
 }
 
 class FIndIdentical{
+	static int[] a=new int[]
 	public static void main(String[] args) {
 		Node root = new Node(1); 
         root.right = new Node(2); 
@@ -26,9 +27,9 @@ class FIndIdentical{
         root1.left.left = new Node(6); 
         root1.right.right = new Node(5); 
         root1.right.left = new Node(4); 
-        System.out.println(help(root));
+        System.out.println(help(root1,root2));
 	}
-	public static void help(Node n){
+	public static boolean help(Node n){
 		
 
 
