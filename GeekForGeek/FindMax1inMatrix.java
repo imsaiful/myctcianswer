@@ -7,7 +7,7 @@ class FindMax1inMatrix{
   		int j=m[0].length-1;
   		int row=0;
   		int i;
-  		System.out.println(m.length+"  "+m[0].length);
+  		
   		for(i=0;i<m.length;i++){
   			while(j>=0 && m[i][j]==1){
   				row=i;
@@ -19,4 +19,4 @@ class FindMax1inMatrix{
 
 
 	}
-}
+}			
