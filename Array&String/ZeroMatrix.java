@@ -35,7 +35,6 @@ class ZeroMatrix{
 			} 
 			for(int i=0;i<r;i++){
 				if(row[i]){
-					System.out.println(row[i]);
 					NullifyRow(a,i);
 				}
 			}
