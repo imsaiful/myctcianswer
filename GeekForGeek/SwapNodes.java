@@ -38,11 +38,13 @@ class SwapNodes{
   }
 
   public static void Print(Node n){
-    if(n!=null){
-      Print(n.left);
+    while(n!=null){
       System.out.print(n.data+"  ");
-      Print(n.right);
+      n=n.next;
     }
+
+
+
   }
 
   public static void help(Node n){
