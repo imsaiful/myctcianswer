@@ -23,7 +23,5 @@ class NextGreaterRightSide{
 		}
 		System.out.print(temp[n]);
 	}
-
-
 }
 

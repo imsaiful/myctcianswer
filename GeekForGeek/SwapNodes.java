@@ -42,9 +42,6 @@ class SwapNodes{
       System.out.print(n.data+"  ");
       n=n.next;
     }
-
-
-
   }
 
   public static void help(Node n){
