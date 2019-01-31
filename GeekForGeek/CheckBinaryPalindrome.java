@@ -2,25 +2,16 @@
 Check if binary representation of a number is palindrome*/
 class CheckBinaryPalindrome{
 	public static void main(String[] args) {
-		int n=9;
-		String r=Convert(n);
-		System.out.println(help(r));
+		int n=7;
+		String s="1000101";
+		String r=reverse(s);
+		System.out.println(r);
+		System.out.println(FindPalindrome(s,r));
 	}
-	public static String Convert(int n){
-		String s="";
-		while(n!=0){
-			int temp=n%2;
-			s+=temp;
-			n=n/2;
-		}
-		return s;
+	public static boolean FindPalindrome(String s,String r){
+		 return s.equals(r);
 	}
-	public static boolean help(String s){
-		for(int i=0;i<=s.length()/2;i++){
-			if(s.charAt(i)!=s.charAt(s.length()-i-1)){
-				return false;
-			}
-		}
-		return true;
-	}
+	static String reverse(String c){
+         return new StringBuilder(c).reverse().toString();
+     }
 }
