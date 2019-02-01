@@ -50,10 +50,5 @@ class StackMin{
 		System.out.println(sm.min());
 		sm.Pop();
 		System.out.println(sm.min());
-
-
-
-
-
 	}
 }

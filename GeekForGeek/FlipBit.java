@@ -5,7 +5,7 @@ class FlipBit{
 	public static void main(String[] args) {
 		Scanner in=new Scanner(new BufferedReader(new InputStreamReader(System.in)));	
 		while(true){
-			int a=in.nextInt();
+		int a=in.nextInt();
 		int b=in.nextInt();
 
 		System.out.println(Count_bit_to_change(a^b));
