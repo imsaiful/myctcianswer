@@ -33,5 +33,8 @@ class LeftView{
 		}
 		leftView(n.left,level+1);
 		leftView(n.right,level+1);
+
+
+
 	}
 }
