@@ -62,8 +62,7 @@ class SwapNodes{
 
   public static void FindNode(Node n){
     if(n!=null){
-      //System.out.println(n.data+"  ");
-      FindNode(n.left);
+    FindNode(n.left);
     if(prev!=null && prev.data>n.data){
       if(first==null){
         first=prev;

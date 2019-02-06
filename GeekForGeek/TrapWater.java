@@ -13,8 +13,6 @@ class TrapWater{
 		for(int i=n-2;i>=0;i--){
 			r[i]=Math.max(r[i+1],a[i]);
 		}
-
-
 		int max=0;
 		for(int i=0;i<a.length;i++){
 			max+=Math.min(l[i],r[i])-a[i];

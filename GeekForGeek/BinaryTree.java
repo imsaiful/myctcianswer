@@ -48,11 +48,11 @@ class BinaryTree {
         
     }  
     public static void top_view(Node root)
-{
-    left_view(root.left);
-    System.out.print(root.data + " ");
-    right_view(root.right);
-}
+        {
+            left_view(root.left);
+            System.out.print(root.data + " ");
+            right_view(root.right);
+        }
 
  public static void left_view(Node root) {
     if (root == null) return;

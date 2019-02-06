@@ -31,12 +31,11 @@ class SwapNode{
 			n=n.next.next;
 		}
 	}
-	public static void Print(Node n){
-		while(n!=null && n.next!=null){
-			int d=n.data;
-			n.data=n.next.data;
-			n.next.data=d;
-			n=n.next.next;
+	public static void Print(Node head){
+		Node temp=head;
+		while(temp!=null){
+			System.out.print(temp.data+" ");
+			temp=temp.next;
 		}
 	}
 }

@@ -14,16 +14,8 @@ class CoinChange{
 			for(int i=1;i<ar.length;i++){
 				if(i>=coin){
 					ar[i]+=ar[i-coin];
-					//System.out.print(ar[i]+" ");
 				}
-
-
 			}
-								//System.out.println();
-
-
-
-
 		}
 		return ar[sum];
 
