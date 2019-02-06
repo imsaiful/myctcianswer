@@ -5,23 +5,24 @@ class IntegerPartOfRoot{
 		int n=121;
 		System.out.println(help(n));
 	}
-	public static void help(int n){
+	public static int help(int n){
 		int f=0;
-		while(f<n){
-			int mid=f+(n-f)/2;
+		int l=n;
+		int ans=-1;
+		while(f<=l){
+			int mid=f+(l-f)/2;
 			if(mid*mid==n){
 				return mid;
 			}
 			if(mid*mid>n){
-				n=mid-1;
+				l=mid-1;
+				ans=mid;
 			}
 			else{
-				l=mid+1;
+				f=mid+1;
+				ans=mid;
 			}
-
 		}
-
-
-
+		return ans;
 	}
 }

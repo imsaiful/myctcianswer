@@ -1,6 +1,6 @@
 class SquareRoot{
 	public static void main(String[] args) {
-		int x=81;
+		int x=121;
 		System.out.print(sqrt(x));
 	}
 	public static int sqrt(int x){
