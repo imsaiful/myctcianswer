@@ -20,11 +20,5 @@ class Search1inMatrix{
 			}
 		}
 		return max;
-
-
-
 	}
-
-
-
 }
