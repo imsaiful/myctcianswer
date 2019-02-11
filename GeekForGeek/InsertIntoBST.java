@@ -49,9 +49,4 @@ class InsertIntoBST{
 			Print(n.right);
 		}
 	}
-
-
-
-
-
 }
