@@ -3,7 +3,7 @@
 class KMPAlgo{
 	public static void main(String[] args) {
 		String s="mynameissaifulhasan";
-		string p="saiful";
+		String p="saiful";
 		find(s,p);
 	}
 
@@ -14,18 +14,19 @@ class KMPAlgo{
 		int i=0;
 		int j=0;
 		while(i<m){
-			if(s.charAt(i)==s.charAt(j)){
+			if(s.charAt(i)==p.charAt(j)){
 				i++;
 				j++;
 				if(j==n){
 					System.out.println("pattern matched at "+(i-j));
+					System.out.println(s.substring(i-j,i));
 					i=m;
 					break;
 				}
 			}
 			else{
 				if(j!=0){
-					j=lps[i-1];
+					j=lps[j-1];
 				}
 				else{
 					i++;
