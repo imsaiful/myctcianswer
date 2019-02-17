@@ -1,41 +1,71 @@
+/* Swap Node in the linkedlist */
+
 class Node{
-		int data;
-		Node next;
-		Node(int d){
-			data=d;
-			next=null;
-		}
+	int data;
+	Node next;
+	Node(int data){
+		this.data=data;
+		next=null;
 	}
+}
+
+
 class SwapNode{
-	static Node head;
 	public static void main(String[] args) {
-		SwapNode sn=new SwapNode();
-		sn.head=new Node(1);
-		sn.head.next=new Node(2);
-		sn.head.next.next=new Node(3);
-		sn.head.next.next.next=new Node(4);
-		sn.head.next.next.next.next=new Node(5);
-		sn.head.next.next.next.next.next=new Node(6);
-		sn.head.next.next.next.next.next.next=new Node(7);
-		sn.head.next.next.next.next.next.next.next=new Node(8);
-		sn.head.next.next.next.next.next.next.next.next=new Node(9);
-		help(head);
-		Print(head);
+		Node n=new Node(1);
+		n.next=new Node(2);
+		n.next.next=new Node(3);
+		n.next.next.next=new Node(4);
+		n.next.next.next.next=new Node(5);
+		n.next.next.next.next.next=new Node(6);
+		Print(n);
+		Swap(n,3,4);
+		Print(n);
 	}
-	public static void help(Node head){
-		Node n=head;
-		while(n!=null && n.next!=null){
-			int temp=n.data;
-			n.data=n.next.data;
-			n.next.data=temp;
-			n=n.next.next;
+
+	public static void Print(Node n){
+		Node cur=n;
+		while(cur!=null){
+			System.out.print(cur.data+" ");
+			cur=cur.next;
 		}
+		System.out.println();
 	}
-	public static void Print(Node head){
-		Node temp=head;
-		while(temp!=null){
-			System.out.print(temp.data+" ");
-			temp=temp.next;
+
+	public static void Swap(Node cur,int n1,int n2){
+		Node curX=cur;
+		Node prevX=null;
+		Node curY=cur;
+		Node prevY=null;
+		while(curX!=null && curX.data!=n1){
+			prevX=curX;
+			curX=curX.next;
 		}
+		while(curY!=null && curY.data!=n2){
+			prevY=curY;
+			curY=curY.next;
+		}
+
+		if(curX==null || curY==null){
+			return;
+		}
+
+		if(prevX!=null){
+			prevX.next=curY;
+		}
+
+		if(prevY!=null){
+			prevY.next=curX;
+		}
+
+		Node temp=curX.next;
+		curX.next=curY.next;
+		curY.next=temp;
+
+
+
 	}
+
+
+
 }
