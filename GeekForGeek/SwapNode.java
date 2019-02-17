@@ -46,6 +46,23 @@ class SwapNode{
 			curY=curY.next;
 		}
 
+
+		Node prevX = null, currX = head; 
+        while (currX != null && currX.data != x) 
+        { 
+            prevX = currX; 
+            currX = currX.next; 
+        } 
+  
+        // Search for y (keep track of prevY and currY) 
+        Node prevY = null, currY = head; 
+        while (currY != null && currY.data != y) 
+        { 
+            prevY = currY; 
+            currY = currY.next; 
+        } 
+  
+
 		if(curX==null || curY==null){
 			return;
 		}
