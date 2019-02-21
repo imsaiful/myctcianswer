@@ -68,14 +68,7 @@ class MergeList{
 			t.next=n2;
 		}
 		return dummy.next;
-
-
-
-
 	}
-
-
-
 }
 
 
