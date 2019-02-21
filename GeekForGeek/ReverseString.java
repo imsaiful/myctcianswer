@@ -4,14 +4,13 @@ import java.util.regex.Pattern;
 
 class ReverseString{
 	public static void main(String[] args) {
-		String str="I love Java Programming";	
-		Pattern p=Pattern.compile("\\s"); 
-		String[] temp=p.split(str);
-		String result="";
-		for(int i=0;i<temp.length;i++){
-			result=temp[i]+" "+result;
+		String s="I love Java Programming";	
+		String[] temp=s.split(" ");
+		StringBuilder sb=new StringBuilder();
+		for(int i=temp.length-1;i>=0;i--){
+			sb.append(temp[i]+" ");
 		}
-		System.out.println(result);
+		System.out.println(sb.toString());
 
 
 
