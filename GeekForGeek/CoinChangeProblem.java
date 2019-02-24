@@ -1,7 +1,7 @@
 class CoinChangeProblem{
 	public static void main(String[] args) {
-		 int a[] = {1, 2, 5 ,10 ,15 ,22 , 28}; 
-		 int m=100;
+		 int a[] = {5, 2, 1}; 
+		 int m=5;
 		 Find_Change(a,a.length,m);
 	}
 	public static void Find_Change(int[] s,int n,int m){
