@@ -1,4 +1,6 @@
 /*Check if a character link list is palindrome or not.*/
+
+import java.util.*;
 class Node{
 	int data;
 	Node next;
@@ -15,15 +17,42 @@ class LinkedListPalindrome{
 		n.next=new Node(2);
 		n.next.next=new Node(3);
 		n.next.next.next=new Node(4);
-		n.next.next.next.next=new Node(3);
-		n.next.next.next.next.next=new Node(2);
-		n.next.next.next.next.next.next=new Node(11);
+		n.next.next.next.next=new Node(5);
 		Print(n);
 		System.out.println();
-		Node reverse=Reverse(n);
-		Print(reverse);
-		System.out.println(isPalindrome(n,reverse));
+		Node head=delete(n,3);
+		Print(head);
+		
 	}
+	public static Node delete(Node head,int x){
+		if(head == null) return head;
+
+		if(head.data > x && head.next == null) return null;
+
+		Node cur = head;
+		Node prev = null;
+
+		while(cur != null && cur.data > x) {
+		    prev = cur;
+		    cur = cur.next;
+		}
+
+		if(prev != null) prev.next = null;
+
+		Node newHead = cur;
+
+		while(cur.next != null) {
+		    if(cur.next.data > x) {
+		        cur.next = cur.next.next;
+		    } else {
+		        cur = cur.next;
+		    }
+		}
+
+		return newHead;
+	}
+
+
 	public static void Print(Node n){
 
 		Node cur=n;

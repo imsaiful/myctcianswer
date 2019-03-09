@@ -36,7 +36,5 @@ class MaximumDifferenceInNodeAnc{
 		result=Math.max(result,n.d-val);
 
 		return Math.min(result,n.d);
-
-
 	}
 }

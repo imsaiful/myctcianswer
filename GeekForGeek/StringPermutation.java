@@ -18,26 +18,39 @@ Input:  str[] = "ABCA"
 Output: AABC AACB ABAC ABCA ACBA ACAB BAAC BACA 
         BCAA CABA CAAB CBAA*/
 import java.util.*;
-class StringPermutation{
-	static HashSet<String> hs=new HashSet<String>();
-	public static void main(String[] args) {
-		String s="ABC";
-		
-		permute("",s);
-	}
-	public static void permute(String prefix,String s){
-		int n=s.length();
+import java.lang.*;
+import java.io.*;
+class GFG
+ {
+	public static void main (String[] args)
+	 {
+	    Scanner in=new Scanner(System.in);
+	    int t=in.nextInt();
+	    while(t-->0){
+	        String s=in.next();
+	        char[] c=s.toCharArray();
+	        Arrays.sort(c);
+	        String text = String.valueOf(c);
+	        permute(text,"");
+	        System.out.println();
+
+
+	    }
+	 }
+	 
+    public static void permute(String s,String prefix){
+        int n=s.length();
 		if(n==0){
-			if(!hs.contains(prefix)){
+		
 				System.out.print(prefix+" ");
-				hs.add(prefix);
-			}
+				return;
+			
 		}
-		for(int i=0;i<n;i++){
-			permute(prefix+s.charAt(i),s.substring(0,i)+s.substring(i+1,n));
-		}
-	}
-
-
-
+		else{
+		    for(int i=0;i<n;i++){
+			permute(s.substring(0,i)+s.substring(i+1,n),prefix+s.charAt(i));
+		}  
+		}  
+   }
+	 
 }

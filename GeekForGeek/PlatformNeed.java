@@ -14,7 +14,7 @@ class PlatformNeed{
 		i=j=max=current=0;
 		while(i<n && j<n){
 			if(arr[i]<=dep[j]){
-				current++;
+				current++;/
 				if(current>max){
 					max++;
 				}

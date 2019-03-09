@@ -21,17 +21,23 @@ class BstOrNot{
 	root.right=new Node(8);
 	root.right.left=new Node(6);
 	root.right.right=new Node(10);
-	System.out.println(help(root,Integer.MIN_VALUE+1,Integer.MAX_VALUE-1));
+	System.out.println(help(root,18));
 
 	}
-	public static boolean help(Node node,int min,int max){
-       if(node==null){
-       	return true;
+	public static int help(Node node,int x){
+       if(node!=null){
+       	 if(node.val==x){
+	       	return 1;
+	       }
+	       else if(node.val<x){
+	       	return help(node.right,x);
+	       }
+	       else{
+	       	return help(node.left,x);
+	       }
        }
-       if(node.val<=min || node.val>max){
-       	return true;
-       }
-       return help(node.left,Integer.MIN_VALUE,node.val) && help(node.right,node.val,max);
+       return 0;
+       
     }
 }
 
