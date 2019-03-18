@@ -9,8 +9,9 @@ class Node{
 	}
 }
 class DeleteInBST{
+	static Node n;
 	public static void main(String[] args) {
-		Node n=new Node(10);
+		n=new Node(10);
 		n=new Node(10);
 		n.left=new Node(5);
 		n.right=new Node(15);
@@ -19,27 +20,36 @@ class DeleteInBST{
 		n.right.right=new Node(20);
 		n.right.left=new Node(12);
 		Print(n);
-		Delete(n,15);
+		System.out.println();
+		DeleteKey(n,30);
 		Print(n);
 
 	}
-	public static void Delete(Node n,int k){
+
+	public static void DeleteKey(Node n,int k){
+		n=Delete(n,k);
+	}
+	public static Node Delete(Node n,int k){
+		if(n==null){
+			return null;
+		}
 		if(n.data<k){
-			Delete(n.right,k);			
+			n.right=Delete(n.right,k);			
 		}
 		else if(n.data>k){
-			Delete(n.right,k);
+			n.left=Delete(n.left,k);
 		}
 		else{
-			if(n.left!=null){
+			if(n.left==null){
 				return n.right;
 			}
-			else if(n.right!=null){
+			else if(n.right==null){
 				return n.left;
 			}
 			n.data=FindMin(n.right);
 			n.right=Delete(n.right,n.data);
 		}
+		return n;
 	}
 	public static int FindMin(Node n){
 		if(n.left!=null){
@@ -52,9 +62,10 @@ class DeleteInBST{
 	public static void Print(Node n){
 		if(n!=null){
 			Print(n.left);
-			System.out.println(n.data+" ");
+			System.out.print(n.data+" ");
 			Print(n.right);
 		}
+
 	}
 
 }
