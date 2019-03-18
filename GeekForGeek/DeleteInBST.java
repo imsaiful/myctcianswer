@@ -20,15 +20,35 @@ class DeleteInBST{
 		n.right.left=new Node(12);
 		Print(n);
 		Delete(n,15);
+		Print(n);
 
 	}
 	public static void Delete(Node n,int k){
-
-
-
-
-
+		if(n.data<k){
+			Delete(n.right,k);			
+		}
+		else if(n.data>k){
+			Delete(n.right,k);
+		}
+		else{
+			if(n.left!=null){
+				return n.right;
+			}
+			else if(n.right!=null){
+				return n.left;
+			}
+			n.data=FindMin(n.right);
+			n.right=Delete(n.right,n.data);
+		}
 	}
+	public static int FindMin(Node n){
+		if(n.left!=null){
+			return FindMin(n.left);
+		}
+		return n.data;
+	}
+
+
 	public static void Print(Node n){
 		if(n!=null){
 			Print(n.left);
