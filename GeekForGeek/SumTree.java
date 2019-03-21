@@ -12,18 +12,18 @@ class TreeNode{
 	}
 }
 
-class SumTree{
+class {
 	TreeNode root;
 		public static void main(String[] args) {
 		Scanner in=new Scanner(new BufferedReader(new InputStreamReader(System.in)));
-		SumTree st=new SumTree();
+		 st=new ();
 		st.root=new TreeNode(26);
 		st.root.left = new TreeNode(10); 
         st.root.right = new TreeNode(3); 
         st.root.left.left = new TreeNode(4); 
         st.root.left.right = new TreeNode(6); 
         st.root.right.right = new TreeNode(3); 
-        boolean flag=st.isSumTree(st.root);
+        boolean flag=st.is(st.root);
         if(flag){
           	System.out.println("The given tree is a sum tree");
         } 
@@ -31,7 +31,7 @@ class SumTree{
         	System.out.println("The given tree is not a sum tree"); 
         }
     }
-    public boolean isSumTree(TreeNode node)
+    public boolean is(TreeNode node)
 	{
 
 		int ls,rs;
@@ -39,7 +39,7 @@ class SumTree{
 		if(node==null || isLeaf(node)){
 			return true;
 		}
-		if(!isSumTree(node.left) && !isSumTree(node.right))
+		if(!is(node.left) && !is(node.right))
 		{
 			if(node.left==null){
 				ls=0;
