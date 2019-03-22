@@ -25,23 +25,28 @@ class ReverseLinkedList{
         n.next.next.next.next=new Node(5);
         n.next.next.next.next.next=new Node(6);
         n.next.next.next.next.next.next=new Node(7);
+        n.next.next.next.next.next.next.next=new Node(8);
+        n.next.next.next.next.next.next.next.next=new Node(9);
+        //n.next.next.next.next.next.next=new Node(7);
         Print(n);
-        ReverseInNthSize(n,3);
+        n=ReverseInNthSize(n,3);
+        Print(n);
     }  
     public static Node ReverseInNthSize(Node n,int k){
         Node next=null;
         Node cur=n;
         Node prev=null;
         int count=0;
-        while(count<k && cur!=null){
+        while(count<k && cur!=null){  
             next=cur.next;
             cur.next=prev;
             prev=cur;
-            cur=cur.next;
+            cur=next;
+            
             count++;
         }
         if(next!=null){
-            cur.next=ReverseInNthSize(next,k);
+            n.next=ReverseInNthSize(next,k);
         }   
         return prev;
     }
