@@ -58,6 +58,7 @@ class AddThreeList{
                 c+=cur3.data;
                 cur3=cur3.next;
             }
+            
             Node temp=new Node(c%10);
             if(head==null){
                 head=temp;
