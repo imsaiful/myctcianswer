@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /* Dijkarstra with priority Queue*/
 
@@ -18,6 +19,7 @@ class DijkastraPQ{
     DijkastraPQ(int v){
         V=v;
         distance=new int[v+1];
+        Arrays.fill(distance,Integer.MAX_VALUE);
     }
 
     public void help(int[][] g,int s){
@@ -26,7 +28,13 @@ class DijkastraPQ{
                 return a.weight-b.weight;
             }
         });
+        pq.add(new DNode(1,0));
+        distance[1]=0;
+        while(!pq.isEmpty()){
+            int node=pq.poll();
 
+
+        }
 
 
 
