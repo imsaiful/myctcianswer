@@ -32,16 +32,23 @@ class DijkastraPQ{
         distance[1]=0;
         while(!pq.isEmpty()){
             int node=pq.poll();
+            hs.add(node);
+            updateNeighbour(g,node);
+        }
+    }
 
-
+    public void updateNeighbour(int[][] g,int s){
+        for(int i=1;i=V;i++){
+            if(!hs.contains(s) && g[s][i]!=Integer.MAX_VALUE){
+                int distance=g[][]
+            }
         }
 
 
 
 
-
-
     }
+
 
     public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
